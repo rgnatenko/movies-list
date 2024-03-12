@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
-import './App.scss';
+import './App.css';
 import { SelectComponent } from './components/SelectComponent';
 import { SearchField } from './components/SearchField';
 import { generateRatingArray } from './utils/generateRatingArray';
