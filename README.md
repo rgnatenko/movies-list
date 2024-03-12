@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+Design Figma file: https://www.figma.com/file/vJHAa1GTYI7ONx3R1ExrJJ/Frontend-challenge?node-id=0%3A1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Functional requirements:
+Initialize the movies array with the given data.
+When user clicks on the movie name search input, open autocomplete with the list of all movies.
+When user enters a search string in the movie name input, the autocomplete list should be updated based on the entered input.
+User should be able to set multiple or any desired ratings, and based on that autocomplete list will be filtered further (for example, if user enters “Matrix” as movie name, but chooses only “1 star” rating, no movies will show).
+Similarly to desired rating filter, user should be able to filter autocomplete list by genre(s).
+Browser JavaScript console (in Developer Tools) does not show any javascript errors.
+Use JSFiddle.net, Stackblitz or any other code sandbox platform to produce your work and send me the link.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Code requirements and standards:
+Use React JS
+Use HOCs, components etc. when makes sense
+Only use functional components
+Apply these best practices: https://www.codeinwp.com/blog/react-best-practices/
+Follow Object Calisthenics rules when makes sense: https://medium.com/@davidsen/clean-code-object-calisthenics-f6f4dec07c8b
+Use third-party libraries when makes sense
