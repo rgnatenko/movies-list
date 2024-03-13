@@ -2,7 +2,7 @@
   "name": "movies-list",
   "version": "0.1.0",
   "homepage": "https://rgnatenko.github.io/movies-list",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
