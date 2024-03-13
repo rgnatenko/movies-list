@@ -1,2 +1,0 @@
-body{margin:0;padding:0}#root{align-items:center;display:flex;justify-content:center;padding-top:15%;padding-inline:50px}.App{align-items:center;grid-template-columns:2fr 1fr;height:100%;width:100%}.App,.select-region{grid-column-gap:16px;column-gap:16px;display:grid;justify-content:center}.select-region{--columns:2;align-items:end;grid-template-columns:repeat(var(--columns),1fr)}.w100{width:100%}.h100{height:100%}
-/*# sourceMappingURL=main.b3556bbf.css.map*/
