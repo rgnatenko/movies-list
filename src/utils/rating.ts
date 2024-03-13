@@ -9,7 +9,7 @@ const STARS_TOTAL_COUNT = 10;
 const generateRatingArray = (): (Rating | string)[] => {
   const start = 1;
   const end = STARS_TOTAL_COUNT;
-  const res: (Rating | string)[] = ['Any genre'];
+  const res: Rating[] = [];
 
   for (let rating = start; rating <= end; rating++) {
     const stars = new Array(end).fill(star);

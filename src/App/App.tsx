@@ -7,7 +7,7 @@ import { useAppContext } from './AppContext';
 import { MovieList } from '../components/MovieList';
 
 export const App = () => {
-  const { movies } = useAppContext();
+  const { movies, movieRating, movieGenre, setMovieGenre, setMovieRating } = useAppContext();
 
   return (
     <div className="App">
@@ -17,16 +17,20 @@ export const App = () => {
         <SelectComponent
           label="Rating"
           items={rating.generateRatingArray()}
+          selectedValue={movieRating}
+          setSelectedValue={setMovieRating}
         />
 
         <SelectComponent
           label="Genre"
-          items={['Any genre', 'Action', 'Comedy', 'Drama', 'Thriller']}
+          items={['Action', 'Comedy', 'Drama', 'Thriller']}
+          selectedValue={movieGenre}
+          setSelectedValue={setMovieGenre}
         />
       </div>
 
       {movies.length > 0 && (
-        <MovieList movies={movies}/>
+        <MovieList movies={movies} />
       )}
     </div>
   );
