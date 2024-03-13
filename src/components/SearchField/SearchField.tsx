@@ -5,7 +5,7 @@ import { loadMovies } from '../../utils/loadMovies';
 import { getMovies } from '../../utils/getMovies';
 
 export const SearchField: React.FC = () => {
-  const { setMovies } = useAppContext();
+  const { setMovies, query, setQuery } = useAppContext();
   const handleClick = () => loadMovies({ getMovies, setMovies });
 
   return (
@@ -13,8 +13,9 @@ export const SearchField: React.FC = () => {
       id="outlined-basic"
       label="Enter Movie Name"
       variant="outlined"
+      value={query}
+      onChange={e => setQuery(e.target.value)}
       onClick={handleClick}
-      onBlur={() => setMovies([])}
     />
   );
 };

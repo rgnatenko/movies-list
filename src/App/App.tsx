@@ -7,7 +7,7 @@ import { useAppContext } from './AppContext';
 import { MovieList } from '../components/MovieList';
 
 export const App = () => {
-  const { movies, movieRating, movieGenre, setMovieGenre, setMovieRating } = useAppContext();
+  const { moviesOnPage, movieRating, movieGenre, setMovieGenre, setMovieRating } = useAppContext();
 
   return (
     <div className="App">
@@ -29,8 +29,8 @@ export const App = () => {
         />
       </div>
 
-      {movies.length > 0 && (
-        <MovieList movies={movies} />
+      {moviesOnPage.length > 0 && (
+        <MovieList movies={moviesOnPage} />
       )}
     </div>
   );
