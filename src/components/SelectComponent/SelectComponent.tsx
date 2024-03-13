@@ -13,17 +13,25 @@ export const SelectComponent: React.FC<Props> = ({ label, items }) => {
     <FormControl fullWidth>
       <InputLabel>{label}</InputLabel>
 
-      <Select className="w100">
-        {items.map((item, index) => (
-          <MenuItem key={typeof item === 'string' ? item : item.stars[index]}>
-            <FormControlLabel
-              control={<Checkbox onChange={(e) => e.preventDefault()}/>}
-              label={typeof item === 'string'
+      <Select>
+        {items.map((item, index) => {
+          const itemIsSring = typeof item === 'string';
+
+          return (
+            <MenuItem
+              key={itemIsSring
                 ? item
-                : <StarsBlock stars={item.stars} />}
-            />
-          </MenuItem>
-        ))}
+                : `rating-${item.rating}-${index}`}
+            >
+              <FormControlLabel
+                control={<Checkbox onChange={(e) => e.preventDefault()} />}
+                label={itemIsSring
+                  ? item
+                  : <StarsBlock stars={item.stars} />}
+              />
+            </MenuItem>
+          );
+        })}
       </Select>
     </FormControl>
   );

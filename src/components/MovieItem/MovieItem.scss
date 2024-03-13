@@ -1,0 +1,19 @@
+.movie {
+  display: flex;
+  justify-content: space-between;
+
+  &__main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__genre {
+    color: $c-grey;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

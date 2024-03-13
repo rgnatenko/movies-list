@@ -1,20 +1,28 @@
-body {
-  padding: 0;
-  margin: 0;
+@import "./../styles/vars.scss";
+@import "./../styles/reset.scss";
+
+@import "./../components/MovieItem/MovieItem.scss";
+@import "./../components/MovieList/MoviesList.scss";
+
+* {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: $c-black;
 }
 
-#root {
+body {
   padding-top: 15%;
   padding-inline: 50px;
-  display:  flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.App {
-  height: 100%;
+#root {
   width: 100%;
+}
 
+.App {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -31,10 +39,3 @@ body {
   grid-template-columns: repeat(var(--columns), 1fr);
 }
 
-.w100 {
-  width: 100%;
-}
-
-.h100 {
-  height: 100%;
-}

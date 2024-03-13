@@ -6,7 +6,7 @@ type Props = {
 
 export const StarsBlock: React.FC<Props> = ({ stars }) => {
   return (
-    <div className="">
+    <div>
       {stars.map(star => (
         <img
           key={star}

@@ -1,19 +1,20 @@
 import { TextField } from '@mui/material';
 import React from 'react';
+import { useAppContext } from '../../App/AppContext';
+import { loadMovies } from '../../utils/loadMovies';
+import { getMovies } from '../../utils/getMovies';
 
-type Props = {
-  value: string
-  onChange: (arg: string) => void
-};
+export const SearchField: React.FC = () => {
+  const { setMovies } = useAppContext();
+  const handleClick = () => loadMovies({ getMovies, setMovies });
 
-export const SearchField: React.FC<Props> = ({ value, onChange }) => {
   return (
     <TextField
       id="outlined-basic"
       label="Enter Movie Name"
       variant="outlined"
-      value={value}
-      onChange={e => onChange(e.target.value)}
+      onClick={handleClick}
+      onBlur={() => setMovies([])}
     />
   );
 };
