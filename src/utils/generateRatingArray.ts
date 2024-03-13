@@ -1,7 +1,7 @@
 import { Rating } from '../types/Rating';
 
-const filledstar = 'images/icons/Star-filled.svg';
-const star = 'images/icons/Star.svg';
+const filledstar = `${process.env.PUBLIC_URL}/images/icons/Star-filled.svg`;
+const star = `${process.env.PUBLIC_URL}/images/icons/Star.svg`;
 
 export const generateRatingArray = (): (Rating | string)[] => {
   const start = 1;
