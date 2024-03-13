@@ -1,8 +1,8 @@
 import { Rating } from '../types/Rating';
 
-const filledStar = `${process.env.PUBLIC_URL}/images/icons/Star-filled.svg`;
-const halfStar = `${process.env.PUBLIC_URL}/images/icons/Star-half.svg`;
-const star = `${process.env.PUBLIC_URL}/images/icons/Star.svg`;
+const filledStar = `${process.env.PUBLIC_URL}/images/Star-filled.svg`;
+const halfStar = `${process.env.PUBLIC_URL}/images/Star-half.svg`;
+const star = `${process.env.PUBLIC_URL}/images/Star.svg`;
 
 const STARS_TOTAL_COUNT = 10;
 
