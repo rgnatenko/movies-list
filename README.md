@@ -1,18 +1,15 @@
-Design Figma file: https://www.figma.com/file/vJHAa1GTYI7ONx3R1ExrJJ/Frontend-challenge?node-id=0%3A1
+# Movie Challenge
 
-Functional requirements:
-Initialize the movies array with the given data.
-When user clicks on the movie name search input, open autocomplete with the list of all movies.
-When user enters a search string in the movie name input, the autocomplete list should be updated based on the entered input.
-User should be able to set multiple or any desired ratings, and based on that autocomplete list will be filtered further (for example, if user enters “Matrix” as movie name, but chooses only “1 star” rating, no movies will show).
-Similarly to desired rating filter, user should be able to filter autocomplete list by genre(s).
-Browser JavaScript console (in Developer Tools) does not show any javascript errors.
-Use JSFiddle.net, Stackblitz or any other code sandbox platform to produce your work and send me the link.
+## The Task
+The goal of this project is to implement a movie autocomplete feature using React JS. Users should be able to search for movies by name and filter the list by ratings and genres.
 
-Code requirements and standards:
-Use React JS
-Use HOCs, components etc. when makes sense
-Only use functional components
-Apply these best practices: https://www.codeinwp.com/blog/react-best-practices/
-Follow Object Calisthenics rules when makes sense: https://medium.com/@davidsen/clean-code-object-calisthenics-f6f4dec07c8b
-Use third-party libraries when makes sense
+## What I Did
+I developed a React application that provides a movie autocomplete feature based on the given requirements. I've created several components, such as a dropdown, a search field for finding movies, and a list of received movies. I've used the `https://movies-and-shows-api.cyclic.app/movies` API for fetching movies and after the first request info about movies is kept in local storage, so the next time the user clicks on input, movies will be displayed quickly.
+
+## What Technologies Were Used
+- **React library:** Used for building the user interface and managing component state.
+- **Material-UI:** Utilized UI components and styling to ensure a modern and visually appealing interface.
+- **TypeScript:** Employed to add static typing to the application for improved code quality and developer productivity.
+- **Figma:** Referenced the provided Figma design file for UI design inspiration and guidance.
+
+[Link to the live demo](https://rgnatenko.github.io/movies-list)
