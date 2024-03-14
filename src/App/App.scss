@@ -32,19 +32,3 @@ body {
     grid-template-columns: repeat(var(--columns), 1fr);
   }
 }
-
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-  border: 1px solid $c-white;
-}
-
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-  color: $c-white !important;
-}
-
-.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
-  background-color: $c-black !important;
-}
-
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-  color: $c-white !important;
-}
