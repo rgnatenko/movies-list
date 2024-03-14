@@ -2,6 +2,8 @@
 import React, { createContext, useContext, useMemo, useState } from 'react';
 import { Movie } from '../types/Movie';
 import { prepareMovies } from '../utils/prepareMovies';
+import { loadMovies } from '../utils/loadMovies';
+import { getMovies } from '../utils/getMovies';
 
 interface AppContextType {
   movies: Movie[],
@@ -13,6 +15,10 @@ interface AppContextType {
   setMovieGenre: (arg: string[]) => void,
   query: string,
   setQuery: (arg: string) => void,
+  error: string,
+  setError: (arg: string) => void,
+  resetFilters: () => void,
+  handleMoviesLoading: () => void
 }
 
 const AppContext = createContext<AppContextType>({
@@ -25,6 +31,10 @@ const AppContext = createContext<AppContextType>({
   setMovieGenre: () => { },
   query: '',
   setQuery: () => { },
+  error: '',
+  setError: () => { },
+  resetFilters: () => { },
+  handleMoviesLoading: () => { },
 });
 
 type AppContextProviderType = {
@@ -37,8 +47,21 @@ export const AppContextProvider: React.FC<AppContextProviderType>
     const [movieRating, setMovieRating] = useState<number[]>([]);
     const [movieGenre, setMovieGenre] = useState<string[]>([]);
     const [query, setQuery] = useState('');
+    const [error, setError] = useState('');
 
-    const moviesOnPage = prepareMovies({movies, movieGenre, movieRating, query});
+    const moviesOnPage = prepareMovies({ movies, movieGenre, movieRating, query });
+
+    const resetFilters = () => {
+      setMovieGenre([]);
+      setMovieRating([]);
+      setQuery('');
+    };
+
+    const handleMoviesLoading = () => loadMovies({
+      getMovies,
+      setMovies,
+      setError,
+    });
 
     const value = useMemo(() => ({
       movies,
@@ -50,6 +73,10 @@ export const AppContextProvider: React.FC<AppContextProviderType>
       query,
       setQuery,
       moviesOnPage,
+      resetFilters,
+      handleMoviesLoading,
+      error,
+      setError,
     }), [movies, movieGenre, movieRating, query]);
 
     return (

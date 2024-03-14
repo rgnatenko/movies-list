@@ -1,6 +1,5 @@
 .movies {
   grid-column: span 1;
-  margin-top: 10px;
 
   display: flex;
   flex-direction: column;
@@ -10,6 +9,5 @@
   max-height: 300px;
   overflow-y: auto;
 
-  background: $c-white;
   border: 1px solid $c-grey;
 }

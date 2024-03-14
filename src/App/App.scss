@@ -1,5 +1,7 @@
-@import "./../styles/vars.scss";
-@import "./../styles/reset.scss";
+@import "./../styles/utils/vars.scss";
+@import "./../styles/utils/reset.scss";
+@import "./../styles/utils/resetMUIStyles.scss";
+@import "./../styles/utils/mixins.scss";
 
 @import "./../components/MovieItem/MovieItem.scss";
 @import "./../components/MovieList/MoviesList.scss";
@@ -7,35 +9,26 @@
 * {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
-  color: $c-black;
+  color: $c-white;
 }
 
 body {
   padding-top: 15%;
-  padding-inline: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-#root {
-  width: 100%;
+  @include paddingInline;
+
+  background-color: $c-black;
 }
 
 .App {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  column-gap: 16px;
-  grid-template-columns: 2fr 1fr;
-}
+  @include grid;
 
-.select-region {
-  --columns: 2;
-  display: grid;
-  justify-content: center;
-  align-items: end;
-  column-gap: 16px;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  &__select-region {
+    --columns: 2;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    column-gap: 16px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
 }
-

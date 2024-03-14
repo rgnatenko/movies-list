@@ -1,0 +1,24 @@
+@mixin onTablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin paddingInline {
+  padding-inline: 24px;
+
+  @include onTablet {
+    padding-inline: 50px;
+  }
+}
+
+@mixin grid {
+  display: grid;
+  align-items: center;
+  row-gap: 16px;
+
+  @include onTablet {
+    column-gap: 16px;
+    grid-template-columns: 2fr 1fr auto;
+  }
+}

@@ -3,11 +3,17 @@ import { Movie } from '../types/Movie';
 interface Arguments {
   getMovies: () => Promise<Movie[]>;
   setMovies: (movies: Movie[]) => void;
+  setError: (arg: string) => void
 }
 
 type LoadMovies = (args: Arguments) => void;
 
-export const loadMovies: LoadMovies = async ({ getMovies, setMovies }) => {
+export const loadMovies: LoadMovies = async ({
+  getMovies,
+  setMovies,
+  setError,
+}) => {
+
   const nameInStorage = 'movies';
   const moviesInStorage = localStorage.getItem(nameInStorage);
 
@@ -22,7 +28,7 @@ export const loadMovies: LoadMovies = async ({ getMovies, setMovies }) => {
 
     setMovies(movies);
     localStorage.setItem(nameInStorage, JSON.stringify(movies));
-  } catch (e) {
-    console.log(e);
+  } catch {
+    setError('Ooops error happened while loading movies, please try to reload page');
   }
 };
