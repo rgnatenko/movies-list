@@ -9,15 +9,8 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import { Rating } from '../../types/Rating';
 import { StarsBlock } from '../StarsBlock';
+import { MenuProps, selectStyle } from './Select.styles';
 //#endregion
-
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: 300,
-    },
-  },
-};
 
 type Props = {
   label: string,
@@ -44,10 +37,11 @@ export const SelectComponent: React.FC<Props> = ({
   return (
     <div>
       <FormControl fullWidth>
-        <InputLabel>{label}</InputLabel>
+        <InputLabel className="label">{label}</InputLabel>
 
         <Select
           multiple
+          sx={selectStyle}
           value={selectedValue}
           onChange={handleChange}
           input={<OutlinedInput label={label} />}
