@@ -11,12 +11,17 @@ const generateRatingArray = (): (Rating | string)[] => {
   const end = STARS_TOTAL_COUNT;
   const res: Rating[] = [];
 
-  for (let rating = start; rating <= end; rating++) {
+  const range = Array.from(
+    { length: end - start + 1 },
+    (_, index) => start + index
+  );
+
+  range.forEach(rating => {
     const stars = new Array(end).fill(star);
     stars.fill(filledStar, 0, rating);
 
     res.push({ stars, rating });
-  }
+  });
 
   return res;
 };
