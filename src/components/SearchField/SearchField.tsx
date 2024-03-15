@@ -11,6 +11,7 @@ export const SearchField: React.FC = () => {
       sx={searchFieldStyle}
       label="Enter Movie Name"
       InputLabelProps={{ className: 'label' }}
+      InputProps={{ style: { color: 'white' } }}
       variant="outlined"
       value={query}
       onChange={e => setQuery(e.target.value)}

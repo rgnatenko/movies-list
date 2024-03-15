@@ -1,6 +1,8 @@
 .movies {
   grid-column: span 1;
 
+  background-color: rgba(37, 36, 48, 0.5);
+
   display: flex;
   flex-direction: column;
   gap: 16px;
